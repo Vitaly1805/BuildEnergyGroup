@@ -15,6 +15,56 @@
     color: #000000;
 }
 
+._arrows {
+    display: flex;
+}
+
+._arrow {
+    position: relative;
+    cursor: pointer;
+    width: 20px;
+    height: 30px;
+
+    @media (max-width: #{$mobile + px}) {
+        display: none;
+    }
+
+    &:after,
+    &::before {
+        content: '';
+        height: 3px;
+        position: absolute;
+        width: 20px;
+        top: 7px;
+        background: #000;
+    }
+
+    &::after {
+        top: 20px;
+    }
+
+    &__next {
+        &:after {
+            transform: rotate(-45deg);
+        }
+        &:before {
+            transform: rotate(45deg);
+        }
+    }
+
+    &__prev {
+        margin: 0 45px 0 0;
+
+        &:after {
+            transform: rotate(45deg);
+        }
+        &:before {
+            transform: rotate(135deg);
+        }
+    }
+}
+
+
 ._btn {
     color: #fff;
     background: #000;

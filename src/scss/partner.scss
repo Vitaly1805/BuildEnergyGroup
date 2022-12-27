@@ -1,0 +1,106 @@
+.partner {
+
+    &__body {
+        padding: 75px 0 98px 0;
+    }
+
+    &__container {
+        display: flex;
+
+
+        @media (max-width: #{$mobile + px}) {
+            flex-direction: column;
+        }
+    }
+
+    &__block {
+        width: 318px;
+        margin: 0 62px 0 0 ;
+        position: relative;
+
+        @media (max-width: #{$mobile + px}) {
+            margin: 0 0 33px 0;
+            width: 100%;
+        }
+    }
+
+    &__title {
+        margin: 0 0 12px 0;
+    }
+
+    &__text {
+        line-height: 170%;
+    }
+
+    &__swiper {
+    }
+}
+
+.swiper-partner {
+    @media (max-width: #{$mobile + px}) {
+        width: 100%;
+    }
+
+    &_wrapper {
+   
+    }
+
+    &__slide {
+        border: 1px solid #d8d8d8;
+        padding: 0 9px;
+        width: 228px;
+        height: 275px;
+        box-sizing: border-box;
+    }
+
+    &__top {
+        height: 147px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    &__img {
+    }
+
+    &__title {
+        font-weight: 600;
+        line-height: 130%;
+        text-align: center;
+        margin: 0 0 6px 0;
+    }
+
+    &__text {
+        font-size: 12px;
+        line-height: 140%;
+        text-align: center;
+        margin: 0 0 13px 0;
+        min-height: 55px;
+    }
+
+    &__bottom {
+        display: flex;
+        justify-content: center;
+    }
+
+    &__link {
+        font-weight: 600;
+        font-size: 14px;
+        line-height: 100%;
+        display: inline-block;
+        margin: 0 auto;
+    }
+
+    &__button {
+        display: block;
+    }
+
+    &__buttons {
+        position: absolute;
+        bottom: 0;
+
+        @media (max-width: #{$mobile + px}) {
+            display: none;
+        }
+    }
+}

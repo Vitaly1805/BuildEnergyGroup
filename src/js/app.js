@@ -25,3 +25,13 @@ const swiperObjectInfo = new Swiper('.swiper-object-info', {
         prevEl: '.swiper-object__button_prev',
     },
 });
+
+const swiperPartner = new Swiper('.swiper-partner', {
+    slidesPerView: "auto",
+    spaceBetween: 25,
+    navigation: {
+        nextEl: '.swiper-partner__button_next',
+        prevEl: '.swiper-partner__button_prev',
+    },
+    // allowTouchMove: true
+});

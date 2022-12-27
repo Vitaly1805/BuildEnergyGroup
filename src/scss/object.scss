@@ -2,6 +2,7 @@
 
     &__body {
         padding: 85px 0 76px 0;
+        background: #eeeeee;
     }
 
     &__container {
@@ -51,61 +52,7 @@
     &__buttons {
         position: absolute; 
         top: 5px;
-        display: flex;
         right: 15px;
-    }
-
-    &__button {
-        position: relative;
-        cursor: pointer;
-        width: 20px;
-        height: 30px;
-
-        @media (max-width: #{$mobile + px}) {
-            display: none;
-        }
-
-        &:after,
-        &::before {
-            content: '';
-            height: 3px;
-            position: absolute;
-            width: 20px;
-            top: 7px;
-            // background: #B9B9B9;
-            background: #000;
-        }
-
-        &::after {
-            top: 20px;
-        }
-
-        // &_active {
-        //     &:after,
-        //     &::before {
-        //         background: #000;
-        //     }
-        // }
-
-        &_next {
-            &:after {
-                transform: rotate(-45deg);
-            }
-            &:before {
-                transform: rotate(45deg);
-            }
-        }
-
-        &_prev {
-            margin: 0 45px 0 0;
-
-            &:after {
-                transform: rotate(45deg);
-            }
-            &:before {
-                transform: rotate(135deg);
-            }
-        }
     }
 
     &__img {
