@@ -1,0 +1,13 @@
+$widthContainer: 1141;
+$widthCanvas: 2000;
+$fontFamily: "Montserrat";
+$fontWeight: 500;
+$fontSize: 16px;
+$mainColor: #3F3F3F;
+$whiteColor: #ffffff;
+
+// Брейк-поинты
+$pc: $widthContainer + px; // ПК, ноутбуки, некоторые планшеты в горизонтальном положении
+$tablet: 991.98; // Планшеты, некоторые телефоны в горизонтальном положении
+$mobile: 767.98; // Телефоны L
+$mobileSmall: 479.98; // Телефоны S

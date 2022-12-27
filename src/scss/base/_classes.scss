@@ -1,0 +1,38 @@
+._container {
+    margin: 0 auto;
+    padding-left: 15px;
+    padding-right: 15px;
+    max-width: $widthContainer + px;
+    // max-width: calc(950px + ($widthContainer - 950) * ((100vw - 320px) / #{$widthCanvas - 320}));
+}
+
+._title {
+    font-weight: 700;
+    font-size: 22px;
+    line-height: 27px;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: #000000;
+}
+
+._btn {
+    color: #fff;
+    background: #000;
+    border-radius: 40px;
+    font-weight: bold;
+    padding: 0 30px;
+    height: 42px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all .5 ease;
+
+    &:hover {
+        background: rgb(36, 34, 34);
+    }
+}
+
+body.lock {
+    overflow: hidden;
+}

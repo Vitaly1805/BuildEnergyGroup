@@ -1,0 +1,76 @@
+.benefits {
+
+    &__body {
+        background: url('../img/benefits/back.png') no-repeat;
+        background-size: cover;
+        position: relative;
+        color: #fff;
+    }
+
+    &__black {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background: rgba($color: #000000, $alpha: .5);
+    }
+
+    &__container {
+        position: relative;
+        @include adaptive-value("padding-top", 80, 45, 3);
+        @include adaptive-value("padding-bottom", 80, 45, 3);
+    }
+
+    &__list {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+
+        @media (max-width: #{$tablet + px}) {
+            display: flex;
+            flex-direction: column;
+        }
+    }
+
+    &__item {
+        &:not(:last-child) {
+            margin: 0 50px 0 0;
+        }
+
+        @media (max-width: #{$tablet + px}) {
+            &:not(:last-child) {
+                margin: 0 0 40px 0;
+            }
+        }
+    }
+
+    &__block {
+        @media (max-width: #{$tablet + px}) {
+            display: flex;
+            align-items: center;
+        }
+    }
+
+    &__icon {
+        margin: 0 18px 25px 0;
+        pointer-events: none;
+    }
+
+    &__subtitle {
+        font-weight: 700;
+        font-size: 22px;
+        line-height: 140%;
+        margin: 0 0 10px 0;
+
+        @media (max-width: #{$widthContainer + px}) {
+            font-size: 20px;
+        }
+    }
+
+    &__text {
+        font-size: 18px;
+        line-height: 160%;
+
+        @media (max-width: #{$widthContainer + px}) {
+            font-size: 16px;
+        }
+    }
+}

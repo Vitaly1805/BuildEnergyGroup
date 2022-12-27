@@ -1,0 +1,138 @@
+.company {
+    &__body {
+        // @include adaptive-value("padding-top", 1000, 1000, 3);
+        margin: 0 0 83px 0;
+        padding: 650px 0 0 0;
+    }
+
+    &__wrapper {
+        display: flex;
+        justify-content: space-between;
+        margin: 0 0 80px 0;
+
+        @media (max-width: $mobile) {
+            display: block;
+        }
+    }
+
+    &__block {
+    }
+
+    &__title {
+        margin: 0 0 38px 0;
+    }
+
+    &__text {
+        line-height: 170%;
+        display: flex;
+        flex-direction: column;
+        max-width: 684px;
+        margin: 0 15px 0 0;
+
+        @media (max-width: $mobile) {
+            height: 100%;
+        }
+
+        span {
+            &:not(:last-child) {
+                margin: 0 0 21px 0;
+            }
+        }
+    }
+
+    &__list {
+        @media (max-width: $mobile) {
+            display: flex;
+            justify-content: space-between;
+            margin: 34px 0 0 0;
+        }
+
+        @media (max-width: 600px) {
+            flex-direction: column;
+        }
+    }
+
+    &__item {
+        &:not(:last-child) {
+            margin: 0 0 20px 0; 
+        }
+    }
+
+    &__number {
+        font-weight: 700;
+        font-size: 60px;
+        line-height: 73px;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+        position: relative;
+        display: inline-block;
+        @include text-gradient;
+        transform: translate(150%, 0);
+        opacity: 0;
+
+        &._active {
+            transform: translate(0, 0);
+            opacity: 1;
+        }
+
+        &_first {
+            transition: all .8s ease 0s;
+        }
+
+        &_second {
+            transition: all .8s ease .3s;
+        }
+
+        &_third {
+            transition: all .8s ease .6s;
+        }
+
+        &_plus {
+            &:after {
+                content: '+';
+                position: absolute;
+                top: -7px;
+                right: -35x;
+                @include text-gradient;
+                font-size: 50px;
+            }
+        }
+    }
+
+    &__description {
+        font-weight: 600;
+        font-size: 20px;
+        line-height: 120%;
+    }
+}
+
+.association-company {
+    &__body {
+        padding: 20px 30px;
+        border: 2px solid transparent;
+        border-image: linear-gradient(94.72deg, #F9A97B 26.2%, #C3825A 95.93%);
+        border-image-slice: 1;
+    }
+
+    &__subtitle {
+        font-weight: 600;
+        line-height: 170%;
+        margin: 0 0 12px 0;
+    }
+
+    &__list {
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__item {
+        font-size: 14px;
+        line-height: 160%;
+
+        @media (max-width: $mobile) {
+            &:not(:last-child) {
+                margin: 0 0 12px 0;
+            }
+        }
+    }
+}
