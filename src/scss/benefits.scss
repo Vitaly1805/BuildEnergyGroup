@@ -1,5 +1,4 @@
 .benefits {
-
     &__body {
         background: url('../img/benefits/back.png') no-repeat;
         background-size: cover;
@@ -31,6 +30,9 @@
     }
 
     &__item {
+        transform: translate(0, 100%);
+        opacity: 0;
+
         &:not(:last-child) {
             margin: 0 50px 0 0;
         }
@@ -39,6 +41,23 @@
             &:not(:last-child) {
                 margin: 0 0 40px 0;
             }
+        }
+
+        &._active {
+            transform: translate(0, 0);
+            opacity: 1;
+        }
+
+        &_first {
+            transition: all .8s ease 0s;
+        }
+
+        &_second {
+            transition: all .8s ease .3s;
+        }
+
+        &_third {
+            transition: all .8s ease .6s;
         }
     }
 

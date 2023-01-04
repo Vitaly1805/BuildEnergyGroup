@@ -14,3 +14,19 @@ export function isWebp() {
 		document.documentElement.classList.add(className);
 	});
 }
+
+
+//Функция установки длины верхней линии input
+export function setWidthLabels() {
+    let inputs = document.querySelectorAll('._input')
+    let labels = document.querySelectorAll('._label')
+    let lines = document.querySelectorAll('._line')
+    const widthAfter = 15
+
+    inputs.forEach((input, index) => {
+        const widthInput = input.offsetWidth - (input.clientLeft * 2)
+        const widthLabel = labels[index].offsetWidth
+
+        lines[index].style.width = widthInput - widthLabel - widthAfter + 'px'
+    })
+}

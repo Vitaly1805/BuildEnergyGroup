@@ -3,7 +3,6 @@
     padding-left: 15px;
     padding-right: 15px;
     max-width: $widthContainer + px;
-    // max-width: calc(950px + ($widthContainer - 950) * ((100vw - 320px) / #{$widthCanvas - 320}));
 }
 
 ._title {
@@ -13,6 +12,42 @@
     letter-spacing: 0.16em;
     text-transform: uppercase;
     color: #000000;
+}
+
+._input {
+    width: 100%;
+    border: 1px solid #D8D8D8;
+    line-height: 150%;
+    padding: 15px 17px;
+    background: rgba($color: #000000, $alpha: 0);
+    color: #fff;   
+    border-top: none;
+
+    &::placeholder {
+        color: #949494;
+    }
+
+    &:invalid:not(:placeholder-shown) {
+        background: rgba(255, 0, 0, 0.08);
+    }
+}
+
+._label {
+    position: absolute;
+    left: 17px;
+    top: -10px;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 150%;
+    padding: 0 5px;
+}
+
+._line {
+    height: 1px;
+    background-color: #D8D8D8;
+    position: absolute;
+    top: 0;
+    right: 0;
 }
 
 ._arrows {
@@ -66,20 +101,22 @@
 
 
 ._btn {
-    color: #fff;
-    background: #000;
-    border-radius: 40px;
-    font-weight: bold;
-    padding: 0 30px;
-    height: 42px;
     display: flex;
-    align-items: center;
-    justify-content: center;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 15px 75px;
+    gap: 10px;
+    background: #D8D8D8;
     cursor: pointer;
-    transition: all .5 ease;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 130%;
+    transition: all .5s ease;
 
     &:hover {
-        background: rgb(36, 34, 34);
+        background: #fff;
     }
 }
 

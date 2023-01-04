@@ -1,1 +1,77 @@
-<footer></footer>
+<footer class="footer">
+    <div class="footer__body">
+        <img src="../img/footer.png" alt="" class="footer__img">
+        <div class="footer__container _container">
+            <div class="footer__block">
+                <img src="../img/svg/logo-footer.svg" class="footer__logo" alt="">
+                <div class="footer__contacts">
+                    <div class="footer__subtitle">
+                        адрес
+                    </div>
+                    <div class="footer__text">
+                        Москва, Звёздный б-р 10, стр. 1, к. 25
+                    </div>
+                    <div class="footer__subtitle">
+                        для связи
+                    </div>
+                    <div class="footer__text">
+                        +7 (910) 333-35-75   |   stroy_energogrupp@mail.ru
+                    </div>
+                </div>
+                <div class="footer__rights">
+                    Все права защищены 2010 - 2022 © ООО «СтройЭнергоГРУПП»
+                </div>
+                <div class="footer__politics">
+                    Политика обработки персональных данных
+                </div>
+                <img src="../img/svg/made-in.svg" alt="" class="footer__made-in">
+            </div>
+            <div class="footer__block">
+                <div class="footer__title _title"> 
+                    оставьте заявку
+                </div>
+                <form method="post" class="footer__form request-form">
+                    <div class="request-form__body">
+                        <div class="request-form__block">
+                            <div class="request-form__wrapper">
+                                <input id="name" type="text" class="request-form__input _input" placeholder=" " pattern="[a-zA-Zа-яА-Я]{6,}" required>
+                                <div class="request-form__line _line"></div>
+                            </div>
+                            <label for="name" class="request-form__label _label">
+                                Ваше имя
+                            </label>
+                        </div>
+                        <div class="request-form__block">
+                            <div class="request-form__wrapper">
+                                <input id="phone" type="text" class="request-form__input _input tel" placeholder=" " pattern="\+7 \(\d{3}\) \d{3} \d{2} \d{2}" required>
+                                <div class="request-form__line _line"></div>
+                            </div> 
+                            <label for="phone" class="request-form__label _label">
+                                Номер телефона
+                            </label>
+                        </div>
+                        <div class="request-form__block">
+                            <div class="request-form__wrapper">
+                                <textarea id="comment" type="text" class="request-form__input _input request-form__textarea" placeholder="Опишите Ваш вопрос или просьбу и удобное время для связи."></textarea>
+                                <div class="request-form__line _line"></div>
+                            </div>
+                            <label for="comment" class="request-form__label _label">
+                                Комментарий
+                            </label>
+                        </div>
+                        <div class="request-form__block">
+                            <div class="request-form__check request-check">
+                                <input id="agree" type="checkbox" class="request-check__checkbox">
+                                <label for="agree" class="request-check__my-checkbox"></label>
+                                <label for="agree" class="request-check__label">
+                                    Я ознакомлен и согласен с <a href="##">правилами</a>
+                                </label>
+                            </div>
+                            <input type="submit" class="request-form__button _btn" value="Отправить">
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</footer>

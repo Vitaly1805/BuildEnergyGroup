@@ -1,0 +1,235 @@
+.modal {
+    z-index: 15;
+    position: fixed;
+    overflow-y: auto;
+    width: 100%;
+    height: 100%;
+    background: rgba($color: #000000, $alpha: .7);
+    top: 0;
+    visibility: hidden;
+    opacity: 0;
+    transition: all 0s ease .6s;
+
+    &.active {
+        visibility: visible;
+        transition: all 0s ease 0s;
+        opacity: 1;
+
+        .modal__body {
+            transform: translate(0, 0);
+        }
+    }
+
+    &__body {
+        transition: transform 1s ease 0s;
+        min-height: 100%;
+        transform: translate(100%, 0);
+        transition: transform .6s linear;
+        height: 100%;
+        display: flex;
+        justify-content: flex-end;
+
+        .request-form {
+            background: #eee;
+            padding-top: 50px;
+            padding-bottom: 60px;
+        }
+
+        .request-form__button {
+            background: #2C3F68;
+            color: #fff;
+
+            &:hover {
+                background: #3F3F3F;
+            }
+        }
+
+        .request-check__my-checkbox {
+            border: 1px solid #000;
+
+            &::after,
+            &::before {
+                background: #000;
+            }
+        }
+
+        .request-form__input {
+            color: #000;
+
+            border: 1px solid #000;
+                border-top: none;
+
+                &::after,
+                &::before {
+                    background: #000;
+            }
+            
+            &:focus {
+                border: 1px solid #D8D8D8;
+                border-top: none;
+
+                &::after,
+                &::before {
+                    background: #D8D8D8;
+                }
+            }
+        }
+    }
+
+    &__img {
+        height: 255px;
+        width: 100%;
+        object-fit: cover;
+
+        @media (max-width: #{$mobile + px}) {
+            height: 200px;
+        }
+    }
+
+    &__content {
+        display: flex;
+        flex-direction: column;
+        background: #fff;
+        width: 776px;
+        position: relative;
+        height: 100%;
+    }
+
+    &__title {
+        margin: 0 0 30px 0;
+    }
+
+    &__text {
+        font-size: 16px;
+        line-height: 170%;
+
+        span {
+            display: block;
+
+            &:not(:last-child) {
+                padding: 0 0 17px 0;
+            }
+        }
+    }
+
+    &__container {
+        padding: 0 35px;
+
+        @media (max-width: #{$mobile + px}) {
+            padding: 0 17px;
+        }
+    }
+
+    &__info {
+        background: #fff;
+        height: 500px;
+        padding-top: 48px;
+        padding-bottom: 54px;
+    }
+}
+
+
+.close {
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    height: 26px;
+    width: 33px;
+    cursor: pointer;
+    
+    &__body {
+        position: relative;
+
+        &::after,
+        &::before {
+            content: '';
+            position: absolute;
+            height: 2px;
+            width: 100%;
+            background: #fff;
+        }
+
+        &::after {
+            transform: rotate(45deg);
+            margin: 11px 0 0 0;
+        }
+
+        &::before {
+            transform: rotate(-45deg);
+            margin: 11px 0 0 0;
+        }
+    }
+
+    &_black {
+        .close__body {         
+            &::after,
+            &::before {
+                background: #000;
+            }
+        }
+    }
+}
+
+.message-form {
+    display: none;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #EEEEEE;
+    z-index: 5;
+    color: #000000;
+    left: 0;
+    top: 0;
+
+    &-success_active {
+        display: block;
+    }
+
+    &__body {
+        display: flex;
+        align-items: center;
+        height: 100%;
+        width: 100%;
+        padding: 0 40px;
+
+        @media (max-width: #{$mobile + px}) {
+            justify-content: center;
+        }
+    }
+
+    &__title {
+        font-weight: 700;
+        font-size: 22px;
+        line-height: 120%;
+        letter-spacing: 0.16em;
+        text-transform: uppercase;
+        margin: 0 0 22px 0;
+    }
+
+    &__text {
+        line-height: 120%;
+
+        @media (max-width: #{$mobile + px}) {
+            text-align: center;
+        }
+    }
+
+    .close {
+        right: 20px;
+        top: 20px;
+    }
+
+    &-fail {
+        .message-form__title {
+            color: red;
+        }
+        
+        .message-form__try-again {
+            text-decoration: underline;
+        }
+
+        &_active {
+            display: block;
+        }
+    }
+}
